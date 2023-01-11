@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition or STO View'
+define service Zui_STO {
+  expose ZPP_STO;
+}

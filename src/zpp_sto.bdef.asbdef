@@ -1,0 +1,13 @@
+managed;// implementation in class zbp_pp_sto unique;
+//strict ( 1 );
+
+define behavior for ZPP_STO //alias <alias_name>
+persistent table ZPP_STO_TBL
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+}

@@ -1,0 +1,50 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'STO Details',
+                typeNamePlural: 'STO',
+                title: { type: #STANDARD, label: 'STO Number', value: 'STO_Num' } }
+              }
+annotate view ZPP_STO
+    with 
+{
+    @UI.facet: [ { id:              'ItemData',
+                purpose:         #STANDARD,
+                type:            #IDENTIFICATION_REFERENCE,
+                 label:           'STO Number',
+                position:        10 } ]
+                
+    @UI: {  lineItem:       [ { position: 10, label: 'STO Number' } ],
+         identification: [ { position: 10 } ]
+         }  
+  @EndUserText.label: 'STO Number'     
+ STO_Num;
+ @UI: {  lineItem:       [ { position: 20, label: 'Material Number' } ],
+         identification: [ { position: 20 } ]
+          }  
+  @EndUserText.label: 'Material Number'
+ Material_Num; 
+  @UI: {  lineItem:       [ { position: 30, label: 'Quantity' } ],
+         identification: [ { position: 30 } ],
+         selectionField: [ { position: 30 } ] 
+           }  
+@EndUserText.label: 'Quantity'           
+ Quantity;  
+
+  @UI: {  lineItem:       [ { position: 40, label: 'Requirement Date'  } ],
+         identification: [ { position: 40 } ],
+          selectionField: [ { position: 40} ] 
+        }  
+@EndUserText.label: 'Requirement Date'          
+Requirement_Date; 
+@UI: {  lineItem:       [ { position: 50, label: 'Supplying Plant' } ],
+         identification: [ { position: 50 } ]
+         
+        }  
+@EndUserText.label: 'Supplying Plant'          
+Supplying_Plant; 
+ @UI: {  lineItem:       [ { position: 60, label: 'Receiving Plant' } ],
+         identification: [ { position: 60 } ]
+          }  
+@EndUserText.label: 'Receiving Plant'            
+Receiving_Plant; 
+}

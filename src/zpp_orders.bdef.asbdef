@@ -1,0 +1,13 @@
+managed; //implementation in class zbp_pp_orders unique;
+//strict ( 1 );
+
+define behavior for zpp_orders //alias <alias_name>
+persistent table ZPP_ORDERS_TBL
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+}

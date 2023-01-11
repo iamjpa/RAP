@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition or PP Orders View'
+define service Zui_pp_orders {
+  expose zpp_orders;
+}
